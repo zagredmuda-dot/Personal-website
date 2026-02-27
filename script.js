@@ -44,14 +44,24 @@
   reveals.forEach(el => obs.observe(el));
 
   // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.fsub');
-    btn.textContent = 'Sent ✓';
-    btn.style.background = 'var(--accent2)';
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-      e.target.reset();
-    }, 3000);
-  }
+ function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.fsub');
+  const formData = new FormData(e.target);
+
+  fetch(e.target.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      btn.textContent = 'Sent ✓';
+      btn.style.background = 'var(--accent2)';
+      setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        e.target.reset();
+      }, 3000);
+    }
+  });
+}
