@@ -2,7 +2,8 @@
 export const site = {
   name: 'Mudasiru Abdullah',
   displayName: 'Abdullah',
-  url: 'https://YOUR-NAME.is-a.dev', // your final address (used for link previews)
+  nickname: 'Zagred', // the name you use online (X, GitHub, domain)
+  url: 'https://zagred.is-a.dev', // your final address (used for link previews)
   email: 'zagredmuda@gmail.com',
   x: 'Zagredmuda', // X handle without the @. Leave empty to hide the link.
   github: 'zagredmuda-dot', // GitHub username. Leave empty to hide the link.

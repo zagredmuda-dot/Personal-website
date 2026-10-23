@@ -8,7 +8,7 @@ import { site } from '@/config';
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} · Web developer`,
+  title: `${site.name} (${site.nickname}) · Web developer`,
   description: site.description,
   openGraph: {
     title: `${site.name} · Issue 01`,
